@@ -1,0 +1,34 @@
+{
+  "name": "cashify-lambda-logger",
+  "version": "1.0.0",
+  "description": "A simple logger, that writes to stdout. Use it as replacement for console in AWS Lambda nodeJS environment.",
+  "main": "index.js",
+  "author": "André Darafarin <andre.darafarin@jungheinrich.de>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p . --outDir dist && cp -r node_modules dist",
+    "test": "jest",
+    "lint": "prettier --check 'src/**/*.{js,json,ts,tsx}' && eslint src/**/*.ts",
+    "lint:fix": "prettier --write 'src/**/*.{js,json,ts,tsx}' && eslint --fix src/**/*.ts"
+  },
+  "dependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.1",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint": "^6.8.0",
+    "prettier": "^2.0.4",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  }
+}
