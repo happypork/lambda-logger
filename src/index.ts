@@ -6,13 +6,13 @@ enum LogLevel {
 }
 
 class Log {
-  defaultFields: any;
+  defaultFields: object;
 
-  constructor(fields?: any) {
+  constructor(fields?: object) {
     this.defaultFields = fields;
   }
 
-  write(level: LogLevel, msg: string, fields?: any) {
+  write(level: LogLevel, msg: string, fields?: object): void {
     process.stdout.write(
       JSON.stringify(
         Object.assign({}, this.defaultFields, {
@@ -24,19 +24,19 @@ class Log {
     );
   }
 
-  info(msg: string, fields?: any) {
+  info(msg: string, fields?: object): void {
     this.write(LogLevel.Info, msg, fields);
   }
 
-  warn(msg: string, fields?: any) {
+  warn(msg: string, fields?: object): void {
     this.write(LogLevel.Warn, msg, fields);
   }
 
-  error(msg: string, fields?: any) {
+  error(msg: string, fields?: object): void {
     this.write(LogLevel.Error, msg, fields);
   }
 
-  debug(msg: string, fields?: any) {
+  debug(msg: string, fields?: object): void {
     this.write(LogLevel.Debug, msg, fields);
   }
 }
