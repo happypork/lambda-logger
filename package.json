@@ -4,7 +4,7 @@
   "description": "A simple logger, that writes to stdout. Use it as replacement for console in AWS Lambda nodeJS environment.",
   "main": "lib/index.js",
   "author": "André Darafarin <andre.darafarin@jungheinrich.de>",
-  "license": "MIT",
+  "license": "",
   "private": true,
   "scripts": {
     "build": "rm -rf lib && tsc -p . --outDir lib && cp -r node_modules dist",
