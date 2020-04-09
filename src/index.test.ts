@@ -1,4 +1,4 @@
-import Log from './logger';
+import Log from './index';
 
 describe('Logger', () => {
   const originalWrite = process.stdout.write;
