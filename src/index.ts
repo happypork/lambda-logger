@@ -41,4 +41,8 @@ class Log {
   }
 }
 
-export default Log;
+const create = (fields?: object) => {
+  return new Log(fields);
+};
+
+export default create;

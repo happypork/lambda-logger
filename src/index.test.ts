@@ -7,7 +7,7 @@ describe('Logger', () => {
 
   beforeEach(() => {
     process.stdout.write = writeMock;
-    logger = new Log();
+    logger = Log();
   });
 
   afterEach(() => {
@@ -56,7 +56,7 @@ describe('Logger', () => {
   });
 
   it('should provide default fields when instantiation', () => {
-    const loggerWithDefaultFields = new Log({ extraField: 'value' });
+    const loggerWithDefaultFields = Log({ extraField: 'value' });
     loggerWithDefaultFields.info('salut');
     expect(writeMock).toHaveBeenCalledTimes(1);
     expect(writeMock).toHaveBeenCalledWith(
