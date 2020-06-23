@@ -41,7 +41,7 @@ class Log {
   }
 }
 
-const create = (fields?: object) => {
+const create = (fields?: object): Log => {
   return new Log(fields);
 };
 

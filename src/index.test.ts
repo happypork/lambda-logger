@@ -64,4 +64,14 @@ describe('Logger', () => {
         '\n'
     );
   });
+
+  it('should provide default fields when instantiation', () => {
+    const loggerWithDefaultFields = Log({ extraField: 'value' });
+    loggerWithDefaultFields.info('salut');
+    expect(writeMock).toHaveBeenCalledTimes(1);
+    expect(writeMock).toHaveBeenCalledWith(
+      JSON.stringify({ extraField: 'value', msg: 'salut', level: 'INFO' }) +
+        '\n'
+    );
+  });
 });
