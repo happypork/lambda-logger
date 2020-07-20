@@ -7,12 +7,12 @@
   "license": "",
   "private": true,
   "scripts": {
-    "build": "rm -rf lib && tsc -p . --outDir lib && cp -r node_modules dist",
+    "build": "rm -rf lib && tsc -p . --outDir lib",
     "test": "jest",
     "lint": "prettier --check 'src/**/*.{js,json,ts,tsx}' && eslint src/**/*.ts",
     "lint:fix": "prettier --write 'src/**/*.{js,json,ts,tsx}' && eslint --fix src/**/*.ts"
   },
-  "dependencies": {
+  "devDependencies": {
     "@types/jest": "^25.2.3",
     "@types/node": "^13.13.12",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
